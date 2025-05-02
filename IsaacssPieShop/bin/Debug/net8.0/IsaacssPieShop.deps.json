@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "IsaacssPieShop/1.0.0": {
+        "runtime": {
+          "IsaacssPieShop.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "IsaacssPieShop/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
