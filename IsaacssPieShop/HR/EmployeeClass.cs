@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IsaacssPieShop
+namespace IsaacssPieShop.HR
 {
 
     //blueprint of an object.
@@ -25,6 +25,8 @@ namespace IsaacssPieShop
         const int minimalHoursWorked = 1;
 
         public employeeType employeeType;
+
+        public static double taxRate = 0.15;
 
         public Employee(string first, string last, string em, DateTime bd) : this(first, last, em, bd, 0, employeeType.StoreManager) { }
         public Employee(string frist, string last, string em, DateTime bd, double rate, employeeType emptype)
@@ -55,14 +57,33 @@ namespace IsaacssPieShop
         public static void UsingACustomType()
         {
             List<string> list = new List<string>();
-            
-        
+
+
         }
 
         public string ConvertToJson()
         {
             string json = JsonConvert.SerializeObject(this);
             return json;
+        }
+
+        public double recieveWage(bool resetHours = true)
+        {
+            double wageBeforeTax = 0.0;
+
+            if (employeeType == employeeType.Manager)
+            {
+                Console.WriteLine($"AN EXTRA WAS ADDED TO THE WAGE SINCE {firstName} IS A MANAGER");
+                wageBeforeTax = NumberOfHoursWorked * hourlyRate;
+            }
+            else
+            {
+                wageBeforeTax = NumberOfHoursWorked * hourlyRate;
+            }
+            double taxAmount = wageBeforeTax * taxRate;
+            wage = wageBeforeTax - taxAmount;
+
+            return wage;
         }
 
     }
