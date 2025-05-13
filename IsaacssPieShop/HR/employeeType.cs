@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IsaacssPieShop
+namespace IsaacssPieShop.HR
 {
     enum employeeType //just named values we can use later 
     {

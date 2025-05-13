@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IsaacssPieShop
+namespace IsaacssPieShop.HR
 {
     internal struct WorkTask // change the class to struct
     {
